@@ -15,4 +15,9 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/api/test', name:'app_home_test')]
+    public function test(){
+        return $this->json("coucou", 200);
+    }
 }
